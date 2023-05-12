@@ -3,9 +3,9 @@ import { AppService } from './app.service';
 
 @Controller()
 export class AppController {
-  constructor(private readonly appService: AppService) {}
+  constructor(private readonly appService: AppService) {} // 의존성 주입
 
-  @Get('hello') //
+  @Get('hello')
   getHello(): string {
     return this.appService.getHello();
   }
