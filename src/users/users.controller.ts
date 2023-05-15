@@ -1,8 +1,9 @@
 import { Body, Controller, Get, Post, Req, Res } from '@nestjs/common';
 import { JoinRequestDto } from './dto/join.request.dto';
 import { UsersService } from './users.service';
-import { ApiOperation } from '@nestjs/swagger';
+import { ApiOperation, ApiTags } from '@nestjs/swagger';
 
+@ApiTags('USER')
 @Controller('api/users')
 export class UsersController {
   constructor(private usersService: UsersService) {}
