@@ -18,11 +18,6 @@ export class LoggerMiddleware implements NestMiddleware {
       this.logger.log(
         `${method} ${originalUrl} ${statusCode} ${contentLength} - ${userAgent} ${ip}`,
       );
-
-      // Context 안쓸때
-      // Logger.log(
-      //   `${method} ${originalUrl} ${statusCode} ${contentLength} - ${userAgent} ${ip}`,
-      // );
     });
     next();
   }
